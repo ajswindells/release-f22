@@ -1,0 +1,51 @@
+==68149== Memcheck, a memory error detector
+==68149== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==68149== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==68149== Command: ./test
+==68149== 
+Randomness seeded to: 2118771265
+===============================================================================
+All tests passed (295647 assertions in 28 test cases)
+
+==68149== 
+==68149== HEAP SUMMARY:
+==68149==     in use at exit: 4,729,776 bytes in 4 blocks
+==68149==   total heap usage: 18,569 allocs, 18,565 frees, 2,251,417,630 bytes allocated
+==68149== 
+==68149== 2,364,888 (24 direct, 2,364,864 indirect) bytes in 1 blocks are definitely lost in loss record 3 of 4
+==68149==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==68149==    by 0x12B897: StickerSheet::addSticker(Image&, unsigned int, unsigned int) (src/StickerSheet.cpp:54)
+==68149==    by 0x12315B: CATCH2_INTERNAL_TEST_8() (tests/tests-part2.cpp:88)
+==68149==    by 0x18C152: Catch::TestInvokerAsFunction::invoke() const (in /workspaces/cs225/release-f22/mp_stickers/build/test)
+==68149==    by 0x16CA28: Catch::TestCaseHandle::invoke() const (in /workspaces/cs225/release-f22/mp_stickers/build/test)
+==68149==    by 0x16B250: Catch::RunContext::invokeActiveTestCase() (in /workspaces/cs225/release-f22/mp_stickers/build/test)
+==68149==    by 0x16A106: Catch::RunContext::runCurrentTest(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /workspaces/cs225/release-f22/mp_stickers/build/test)
+==68149==    by 0x1698C4: Catch::RunContext::runTest(Catch::TestCaseHandle const&) (in /workspaces/cs225/release-f22/mp_stickers/build/test)
+==68149==    by 0x174704: Catch::(anonymous namespace)::TestGroup::execute() (in /workspaces/cs225/release-f22/mp_stickers/build/test)
+==68149==    by 0x1738A5: Catch::Session::runInternal() (in /workspaces/cs225/release-f22/mp_stickers/build/test)
+==68149==    by 0x173486: Catch::Session::run() (in /workspaces/cs225/release-f22/mp_stickers/build/test)
+==68149==    by 0x12A339: int Catch::Session::run<char>(int, char const* const*) (in /workspaces/cs225/release-f22/mp_stickers/build/test)
+==68149== 
+==68149== 2,364,888 (24 direct, 2,364,864 indirect) bytes in 1 blocks are definitely lost in loss record 4 of 4
+==68149==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==68149==    by 0x12B897: StickerSheet::addSticker(Image&, unsigned int, unsigned int) (src/StickerSheet.cpp:54)
+==68149==    by 0x128334: CATCH2_INTERNAL_TEST_32() (tests/tests-part2.cpp:325)
+==68149==    by 0x18C152: Catch::TestInvokerAsFunction::invoke() const (in /workspaces/cs225/release-f22/mp_stickers/build/test)
+==68149==    by 0x16CA28: Catch::TestCaseHandle::invoke() const (in /workspaces/cs225/release-f22/mp_stickers/build/test)
+==68149==    by 0x16B250: Catch::RunContext::invokeActiveTestCase() (in /workspaces/cs225/release-f22/mp_stickers/build/test)
+==68149==    by 0x16A106: Catch::RunContext::runCurrentTest(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /workspaces/cs225/release-f22/mp_stickers/build/test)
+==68149==    by 0x1698C4: Catch::RunContext::runTest(Catch::TestCaseHandle const&) (in /workspaces/cs225/release-f22/mp_stickers/build/test)
+==68149==    by 0x174704: Catch::(anonymous namespace)::TestGroup::execute() (in /workspaces/cs225/release-f22/mp_stickers/build/test)
+==68149==    by 0x1738A5: Catch::Session::runInternal() (in /workspaces/cs225/release-f22/mp_stickers/build/test)
+==68149==    by 0x173486: Catch::Session::run() (in /workspaces/cs225/release-f22/mp_stickers/build/test)
+==68149==    by 0x12A339: int Catch::Session::run<char>(int, char const* const*) (in /workspaces/cs225/release-f22/mp_stickers/build/test)
+==68149== 
+==68149== LEAK SUMMARY:
+==68149==    definitely lost: 48 bytes in 2 blocks
+==68149==    indirectly lost: 4,729,728 bytes in 2 blocks
+==68149==      possibly lost: 0 bytes in 0 blocks
+==68149==    still reachable: 0 bytes in 0 blocks
+==68149==         suppressed: 0 bytes in 0 blocks
+==68149== 
+==68149== For lists of detected and suppressed errors, rerun with: -s
+==68149== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
