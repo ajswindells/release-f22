@@ -217,16 +217,16 @@ void List<T>::reverse( ListNode * & startPoint, ListNode * & endPoint ) {
     previous = endPoint->prev;
     
     if (startPoint->next != NULL) {
-        endPoint ->prev = startPoint->next;
+        endPoint->prev = startPoint->next;
         startPoint->next->next = endPoint;
     } else {
-        endPoint ->prev = NULL;
+        endPoint->prev = NULL;
     }
     if (previous != NULL) {
         startPoint->next = previous;
         previous->prev = startPoint;
     } else {
-        startPoint ->next = NULL;
+        startPoint->next = NULL;
     }
     curr = startPoint;
     startPoint = endPoint;
@@ -312,7 +312,38 @@ void List<T>::mergeWith(List<T> & otherList) {
 template <typename T>
 typename List<T>::ListNode * List<T>::merge(ListNode * first, ListNode* second) {
   /// @todo Graded in MP3.2
-  return NULL;
+  ListNode* one = first;
+  ListNode* two = second;
+  ListNode* tempList;
+  ListNode* nextHold;
+  if (one->data < two->data) {
+    tempList = one;
+    one = one->next;
+    head_ = one;
+  } else {
+    tempList = two;
+    two = two->next;
+    head_ = two;
+  }
+  while (one != NULL || two != NULL) {
+    if (two == NULL || (one != NULL && one->data < two->data)) {
+      tempList->next = one;
+      nextHold = tempList->next;
+      nextHold->prev = tempList;
+      tempList = tempList->next;
+      one = one->next;
+    } else {
+      tempList->next = two;
+      nextHold = tempList->next;
+      nextHold->prev = tempList;
+      tempList = tempList->next;
+      two = two->next;
+    }
+  }
+  if (first->data < second->data) {
+    return first;
+  }
+  return second;
 }
 
 /**
@@ -329,5 +360,13 @@ typename List<T>::ListNode * List<T>::merge(ListNode * first, ListNode* second) 
 template <typename T>
 typename List<T>::ListNode* List<T>::mergesort(ListNode * start, int chainLength) {
   /// @todo Graded in MP3.2
-  return NULL;
+  if (chainLength == 1) {
+    return start;
+  }
+  int half = chainLength/2;
+  ListNode* right = split(start, half);
+  ListNode* left = start;
+  right = mergesort(right, chainLength-half);
+  start = mergesort(left, half);
+  return merge(right,start);
 }
