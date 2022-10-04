@@ -249,6 +249,7 @@ void List<T>::reverseNth(int n) {
   }
   if (n == length_) {
     reverse();
+    return;
   }
   ListNode* t_head = head_;
   ListNode* t_tail = NULL;
