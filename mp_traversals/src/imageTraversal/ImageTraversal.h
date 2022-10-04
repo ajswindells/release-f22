@@ -52,7 +52,6 @@ public:
     double tolerance_;
     PNG png_;
     std::vector<bool> visitedList;
-
   };
 
   /**
