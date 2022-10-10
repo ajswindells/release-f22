@@ -47,6 +47,7 @@ set(OLD_GLOB
   "/workspaces/cs225/release-f22/mp_traversals/src/imageTraversal/BFS.cpp"
   "/workspaces/cs225/release-f22/mp_traversals/src/imageTraversal/DFS.cpp"
   "/workspaces/cs225/release-f22/mp_traversals/src/imageTraversal/ImageTraversal.cpp"
+  "/workspaces/cs225/release-f22/mp_traversals/src/main.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

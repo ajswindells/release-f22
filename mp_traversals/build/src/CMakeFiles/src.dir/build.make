@@ -223,6 +223,20 @@ src/CMakeFiles/src.dir/imageTraversal/ImageTraversal.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/imageTraversal/ImageTraversal.cpp.s"
 	cd /workspaces/cs225/release-f22/mp_traversals/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/cs225/release-f22/mp_traversals/src/imageTraversal/ImageTraversal.cpp -o CMakeFiles/src.dir/imageTraversal/ImageTraversal.cpp.s
 
+src/CMakeFiles/src.dir/main.cpp.o: src/CMakeFiles/src.dir/flags.make
+src/CMakeFiles/src.dir/main.cpp.o: ../src/main.cpp
+src/CMakeFiles/src.dir/main.cpp.o: src/CMakeFiles/src.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/cs225/release-f22/mp_traversals/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/src.dir/main.cpp.o"
+	cd /workspaces/cs225/release-f22/mp_traversals/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/src.dir/main.cpp.o -MF CMakeFiles/src.dir/main.cpp.o.d -o CMakeFiles/src.dir/main.cpp.o -c /workspaces/cs225/release-f22/mp_traversals/src/main.cpp
+
+src/CMakeFiles/src.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/src.dir/main.cpp.i"
+	cd /workspaces/cs225/release-f22/mp_traversals/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/cs225/release-f22/mp_traversals/src/main.cpp > CMakeFiles/src.dir/main.cpp.i
+
+src/CMakeFiles/src.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/main.cpp.s"
+	cd /workspaces/cs225/release-f22/mp_traversals/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/cs225/release-f22/mp_traversals/src/main.cpp -o CMakeFiles/src.dir/main.cpp.s
+
 # Object files for target src
 src_OBJECTS = \
 "CMakeFiles/src.dir/Animation.cpp.o" \
@@ -235,7 +249,8 @@ src_OBJECTS = \
 "CMakeFiles/src.dir/colorPicker/SolidColorPicker.cpp.o" \
 "CMakeFiles/src.dir/imageTraversal/BFS.cpp.o" \
 "CMakeFiles/src.dir/imageTraversal/DFS.cpp.o" \
-"CMakeFiles/src.dir/imageTraversal/ImageTraversal.cpp.o"
+"CMakeFiles/src.dir/imageTraversal/ImageTraversal.cpp.o" \
+"CMakeFiles/src.dir/main.cpp.o"
 
 # External object files for target src
 src_EXTERNAL_OBJECTS =
@@ -251,9 +266,10 @@ src/libsrc.a: src/CMakeFiles/src.dir/colorPicker/SolidColorPicker.cpp.o
 src/libsrc.a: src/CMakeFiles/src.dir/imageTraversal/BFS.cpp.o
 src/libsrc.a: src/CMakeFiles/src.dir/imageTraversal/DFS.cpp.o
 src/libsrc.a: src/CMakeFiles/src.dir/imageTraversal/ImageTraversal.cpp.o
+src/libsrc.a: src/CMakeFiles/src.dir/main.cpp.o
 src/libsrc.a: src/CMakeFiles/src.dir/build.make
 src/libsrc.a: src/CMakeFiles/src.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/workspaces/cs225/release-f22/mp_traversals/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX static library libsrc.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/workspaces/cs225/release-f22/mp_traversals/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX static library libsrc.a"
 	cd /workspaces/cs225/release-f22/mp_traversals/build/src && $(CMAKE_COMMAND) -P CMakeFiles/src.dir/cmake_clean_target.cmake
 	cd /workspaces/cs225/release-f22/mp_traversals/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/src.dir/link.txt --verbose=$(VERBOSE)
 

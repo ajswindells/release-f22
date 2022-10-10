@@ -395,6 +395,30 @@ imageTraversal/ImageTraversal.cpp.s:
 	cd /workspaces/cs225/release-f22/mp_traversals/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/imageTraversal/ImageTraversal.cpp.s
 .PHONY : imageTraversal/ImageTraversal.cpp.s
 
+main.o: main.cpp.o
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	cd /workspaces/cs225/release-f22/mp_traversals/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	cd /workspaces/cs225/release-f22/mp_traversals/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	cd /workspaces/cs225/release-f22/mp_traversals/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/main.cpp.s
+.PHONY : main.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -437,6 +461,9 @@ help:
 	@echo "... imageTraversal/ImageTraversal.o"
 	@echo "... imageTraversal/ImageTraversal.i"
 	@echo "... imageTraversal/ImageTraversal.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 
