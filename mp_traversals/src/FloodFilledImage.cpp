@@ -9,6 +9,8 @@
 #include "Animation.h"
 #include "FloodFilledImage.h"
 
+#include <vector>
+
 using namespace cs225;
 
 /**
@@ -18,7 +20,7 @@ using namespace cs225;
  */
 FloodFilledImage::FloodFilledImage(const PNG & png) {
   /** @todo [Part 2] */
-  png_ = png;
+  png_ = new PNG(png);
 }
 
 /**
@@ -30,6 +32,8 @@ FloodFilledImage::FloodFilledImage(const PNG & png) {
  */
 void FloodFilledImage::addFloodFill(ImageTraversal & traversal, ColorPicker & colorPicker) {
   /** @todo [Part 2] */
+  traversal_.push_back(&traversal);
+  color_.push_back(&colorPicker);
 }
 
 /**
@@ -54,5 +58,22 @@ void FloodFilledImage::addFloodFill(ImageTraversal & traversal, ColorPicker & co
 Animation FloodFilledImage::animate(unsigned frameInterval) const {
   Animation animation;
   /** @todo [Part 2] */
+  unsigned counter = 0;
+  animation.addFrame(*png_);
+  for (ColorPicker* color : color_) {
+    unsigned frame = 0;
+    for (ImageTraversal::Iterator i = traversal_[counter]->begin(); i != traversal_[counter]->end(); ++i) {
+      HSLAPixel& current_pixel = png_->getPixel((*i).x, (*i).y);
+      HSLAPixel current_color = color->getColor((*i).x, (*i).y);
+      current_pixel = current_color;
+      ++frame;
+      if (frame == frameInterval) {
+        animation.addFrame(*png_);
+        frame = 0;
+      }
+    }
+    animation.addFrame(*png_);
+    ++counter;
+  }
   return animation;
 }

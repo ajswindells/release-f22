@@ -21,8 +21,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/src.dir/imageTraversal/DFS.cpp.o.d"
   "CMakeFiles/src.dir/imageTraversal/ImageTraversal.cpp.o"
   "CMakeFiles/src.dir/imageTraversal/ImageTraversal.cpp.o.d"
-  "CMakeFiles/src.dir/main.cpp.o"
-  "CMakeFiles/src.dir/main.cpp.o.d"
   "libsrc.a"
   "libsrc.pdb"
 )

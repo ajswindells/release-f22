@@ -19,7 +19,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/workspaces/cs225/release-f22/mp_traversals/src/imageTraversal/BFS.cpp" "src/CMakeFiles/src.dir/imageTraversal/BFS.cpp.o" "gcc" "src/CMakeFiles/src.dir/imageTraversal/BFS.cpp.o.d"
   "/workspaces/cs225/release-f22/mp_traversals/src/imageTraversal/DFS.cpp" "src/CMakeFiles/src.dir/imageTraversal/DFS.cpp.o" "gcc" "src/CMakeFiles/src.dir/imageTraversal/DFS.cpp.o.d"
   "/workspaces/cs225/release-f22/mp_traversals/src/imageTraversal/ImageTraversal.cpp" "src/CMakeFiles/src.dir/imageTraversal/ImageTraversal.cpp.o" "gcc" "src/CMakeFiles/src.dir/imageTraversal/ImageTraversal.cpp.o.d"
-  "/workspaces/cs225/release-f22/mp_traversals/src/main.cpp" "src/CMakeFiles/src.dir/main.cpp.o" "gcc" "src/CMakeFiles/src.dir/main.cpp.o.d"
   )
 
 # Targets to which this target links.
